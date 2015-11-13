@@ -43,6 +43,6 @@ public class Result {
 	
 	@Override
 	public String toString() {
-		return String.format("{name:%s,status:%s,msg:%s}", name,status, msg);
+		return String.format("{'name':'%s','status':'%s','msg':'%s'}", name,status, msg);
 	}
 }
