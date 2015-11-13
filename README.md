@@ -6,10 +6,13 @@
 
 1. [注册](https://portal.qiniu.com/signup)七牛帐号，完成标准用户认证 
 2. 创建空间(这里如果选择了私有空间，那么下载方式会有不同)
-3. 下载cordova插件：http://7xnxsw.com1.z0.glb.clouddn.com/cordova-qiniu-plugin/qiniu.zip
+3. 安装插件：
+```cmd
+	cordova plugins add cordova-plugin-qiniu
+```
 
 ## 说明
-把下载好的插件放进你的项目中，找到插件目录，修改配置文件：
+找到插件目录，修改配置文件：
 
 **QiniuKey.java**
 
