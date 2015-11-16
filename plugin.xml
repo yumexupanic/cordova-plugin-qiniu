@@ -22,7 +22,6 @@
 		<source-file src="src/android/libs/qiniu-android-sdk-7.0.4.jar" target-dir="libs" framework="true" />
 		<!--配置源码-->
 		<source-file src="src/android/java/QiniuPlugin.java" target-dir="src/com/cordova/qiniu/yumemor/plugin/"/>
-		<source-file src="src/android/java/Result.java" target-dir="src/com/cordova/qiniu/yumemor/bean/"/>
 		<source-file src="src/android/java/QiniuKey.java" target-dir="src/com/cordova/qiniu/yumemor/plugin/"/>
 		<source-file src="src/android/java/StrUtils.java" target-dir="src/com/cordova/qiniu/yumemor/util/"/>
 	</platform>

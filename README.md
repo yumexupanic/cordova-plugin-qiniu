@@ -104,4 +104,24 @@ String url = auth.privateDownloadUrl(域名+文件名称);
 
 ![image](http://7xnxsw.com1.z0.glb.clouddn.com/cordova-qiniu-plugin/QQ截图20151111150111.png)
 
+## 更新内容
+
+### 1.0.6
+
+* 支持七牛云批量上传 
+``` javascript
+var options = new Object();
+options.prefix = "abc";
+options.filePaths = new Array();
+options.filePaths.push("data:/xxxx");
+
+window.plugins.QiniuUpload.uploads(options,function(re){
+	console.log(re);
+},function(re){
+	console.log(re);						
+});
+```
+* 修改返回参数为json，不需要手动转化
+* 删除Result对象
+
 Demo下载：http://7xnxsw.com1.z0.glb.clouddn.com/cordova-qiniu-plugin/captureAudio.zip

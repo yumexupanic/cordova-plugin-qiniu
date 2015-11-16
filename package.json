@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-qiniu",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "基于七牛云编写的Cordova插件",
   "cordova": {
     "id": "com.cordova.plugin.qiniuUpload",
