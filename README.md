@@ -124,4 +124,8 @@ window.plugins.QiniuUpload.uploads(options,function(re){
 * 修改返回参数为json，不需要手动转化
 * 删除Result对象
 
+### 1.0.7
+
+解决中文文件上传问题。
+
 Demo下载：http://7xnxsw.com1.z0.glb.clouddn.com/cordova-qiniu-plugin/captureAudio.zip

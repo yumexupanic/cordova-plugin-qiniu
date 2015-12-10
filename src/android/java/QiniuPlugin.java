@@ -2,6 +2,7 @@ package com.cordova.qiniu.yumemor.plugin;
 
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Method;
 
 import org.apache.cordova.CallbackContext;
@@ -16,6 +17,8 @@ import com.cordova.qiniu.yumemor.util.StrUtils;
 import com.qiniu.android.http.ResponseInfo;
 import com.qiniu.android.storage.UpCompletionHandler;
 import com.qiniu.android.storage.UploadManager;
+
+import java.net.URLDecoder;
 
 import android.util.Log;
 
@@ -78,15 +81,16 @@ public class QiniuPlugin extends CordovaPlugin implements UpCompletionHandler {
 		return false;
 	}
 
-	private void uploadFile(JSONArray args) throws JSONException {
+	private void uploadFile(JSONArray args) throws JSONException,UnsupportedEncodingException {
 		flag = false;
 		String prefix = args.optJSONObject(0).getString("prefix");
 		String filePath = args.optJSONObject(0).getString("filePath");
 		String name = StrUtils.appendPrefix(prefix, StrUtils.getFileName(filePath));	//获取文件名称 添加前缀
+		filePath = URLDecoder.decode(filePath, "UTF-8");	//文件路径解码
 		uploadManager.put(new File(filePath), name, QiniuKey.UPLOAD_TOKEN, this, null);
 	}
 	
-	private void uploadArrayFile(JSONArray args) throws JSONException{
+	private void uploadArrayFile(JSONArray args) throws JSONException,UnsupportedEncodingException{
 		flag = true;
 		JSONObject jsons = args.optJSONObject(0);
 		String prefix = jsons.getString("prefix");
@@ -95,6 +99,7 @@ public class QiniuPlugin extends CordovaPlugin implements UpCompletionHandler {
 		for(int i = 0 ; i < filePaths.length() ; i++){
 			String filePath = filePaths.optString(i);
 			String name = StrUtils.appendPrefix(prefix, StrUtils.getFileName(filePath));	//获取文件名称 添加前缀
+			filePath = URLDecoder.decode(filePath, "UTF-8");	//文件路径解码
 			uploadManager.put(new File(filePath), name, QiniuKey.UPLOAD_TOKEN, this,null);	//开始上传
 		}
 
