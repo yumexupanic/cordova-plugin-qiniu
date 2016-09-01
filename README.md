@@ -96,9 +96,7 @@ file:///storage/emulated/0/Android/data/io.hello.cordova.cache/2013424231.jpg
 
 当文件上传成功之后会返回文件的完整名称。
 
-## 演示
-
-![image](http://oct8d1mqf.bkt.clouddn.com/2016-09-01-qiniuDemo.gif)
+## 演示 [点击](http://oct8d1mqf.bkt.clouddn.com/2016-09-01-qiniuDemo.gif)
 
 七牛空间:
 ![image](http://oct8d1mqf.bkt.clouddn.com/2016-09-01-14%3A10%3A10.jpg)
